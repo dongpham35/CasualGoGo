@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 409b044ff8b5cd9429011a8fed3d8208, type: 3}
+  m_Name: characterDB
+  m_EditorClassIdentifier: 
+  characterDatabase:
+  - nameCharacter: Mask Dude
+    spriteCharacter: {fileID: -6367560908665664636, guid: 3750f45c844123341b9a777a96cb1eca, type: 3}
+    animationClips:
+    - {fileID: 7400000, guid: 39a3c1b030a8d88488ded1873f408ed7, type: 2}
+    - {fileID: 7400000, guid: cd101e59a1e45aa48993a2b4a659a249, type: 2}
+    - {fileID: 7400000, guid: cab64f726e4349144884e159af1b3d88, type: 2}
+    - {fileID: 7400000, guid: e4ad33fd571fccc418b7932a2fdb9f2d, type: 2}
+    - {fileID: 7400000, guid: c124d68c45a71c24984984db61d5398f, type: 2}
+    - {fileID: 7400000, guid: a53a026c3a773674d9293fe563b6faa1, type: 2}
+    controller: {fileID: 9100000, guid: cc00dad6f8d72b242874d866272a3bcc, type: 2}
+  - nameCharacter: Ninja Frog
+    spriteCharacter: {fileID: -6367560908665664636, guid: cd947491a13509945aa1b644f9db3ef2, type: 3}
+    animationClips:
+    - {fileID: 7400000, guid: 7329b0b1cf796c442be4795f969055a1, type: 2}
+    - {fileID: 7400000, guid: eb46c12cd4ff9134d817f7d923599b25, type: 2}
+    - {fileID: 7400000, guid: 70d65a0773d2da44b8c36b2268cb4b1a, type: 2}
+    - {fileID: 7400000, guid: d0e34deeab791b0468a1e3efe890c796, type: 2}
+    - {fileID: 7400000, guid: 649c056313f36114dbac7c3d3449b8d5, type: 2}
+    - {fileID: 7400000, guid: 25ebac8f05429d64c97c08dcef54d036, type: 2}
+    controller: {fileID: 9100000, guid: b34c49fa2f01f87429d5a6a561aee4f1, type: 2}
+  - nameCharacter: Pink Man
+    spriteCharacter: {fileID: -6367560908665664636, guid: d348dff3819df794186a80cb95777629, type: 3}
+    animationClips:
+    - {fileID: 7400000, guid: aa2ce2eb65d7021409ce470be07d42b7, type: 2}
+    - {fileID: 7400000, guid: ddfd06e772b7bea459b1f3cfdfacdd3c, type: 2}
+    - {fileID: 7400000, guid: 7942c9930a30cec4989b739acf8fb94e, type: 2}
+    - {fileID: 7400000, guid: 90c8f9966895e494a92f9e2059d69814, type: 2}
+    - {fileID: 7400000, guid: 51cc19b3c02d1e2418e81b0fb8a726aa, type: 2}
+    - {fileID: 7400000, guid: 9ac9e684607717d4f84725d0c89023ae, type: 2}
+    controller: {fileID: 9100000, guid: da60eeaaff91e2a469e0ef66704e71f1, type: 2}
+  - nameCharacter: Virtual Guy
+    spriteCharacter: {fileID: -6367560908665664636, guid: 40de9a8703e2e5a47882b0b86451c741, type: 3}
+    animationClips:
+    - {fileID: 7400000, guid: 322a353047f85f640b877c0d87480222, type: 2}
+    - {fileID: 7400000, guid: 7867f35e2a60dc24db4d47412d344a69, type: 2}
+    - {fileID: 7400000, guid: 684c8dbecbb892340a0df8c0f1d3912f, type: 2}
+    - {fileID: 7400000, guid: 841a6654ed4c3a749ae107d5858bbca4, type: 2}
+    - {fileID: 7400000, guid: f01022cd1d3fbce439209e189e71a4b3, type: 2}
+    - {fileID: 7400000, guid: 7e0905bf0d405a046a9bed7682aa84d1, type: 2}
+    controller: {fileID: 9100000, guid: 63e495ccc06de65449f6da40858dcdc6, type: 2}
