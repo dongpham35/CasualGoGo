@@ -7,12 +7,16 @@ public class PlayerController : MonoBehaviour
     public string inputHorizontal;
     public string inputVertical;
 
+    [SerializeField] private LayerMask mapMask;
+
+    private bool isDoublejump = false;
     private float dirX;
     private float speedCharacter = 7.0f;
     private float jumpCharacter = 14.0f;
     private Rigidbody2D rb;
     private Animator animatorPlayer;
     private SpriteRenderer spritePlayer;
+    private BoxCollider2D colliderPlayer;
     enum anim { idle, run, jump, fall, doublejump}
     anim state;
     private void Start()
@@ -21,6 +25,7 @@ public class PlayerController : MonoBehaviour
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
         animatorPlayer = GetComponent<Animator>();
         spritePlayer = GetComponent<SpriteRenderer>();
+        colliderPlayer = GetComponent<BoxCollider2D>();
     }
 
     private void Update()
@@ -29,7 +34,11 @@ public class PlayerController : MonoBehaviour
         rb.velocity = new Vector2(dirX * speedCharacter, rb.velocity.y);
         if(Input.GetButtonDown(inputVertical))
         {
-            rb.velocity = new Vector2(rb.velocity.x, jumpCharacter);
+            if(isDoublejump || iSGround())
+            {
+                rb.velocity = new Vector2(rb.velocity.x, jumpCharacter);
+                isDoublejump = !isDoublejump;
+            }
         }
 
         updateAnimation();
@@ -51,12 +60,16 @@ public class PlayerController : MonoBehaviour
             state = anim.idle;
         }
 
-        if(rb.velocity.y > 0f)
+        if(rb.velocity.y > 1f)
         {
             state = anim.jump;
+            if(!isDoublejump)
+            {
+                state = anim.doublejump;
+            }
         }
 
-        if(rb.velocity.y < 0f)
+        if(rb.velocity.y < -1f)
         {
             state = anim.fall;
         }
@@ -64,4 +77,16 @@ public class PlayerController : MonoBehaviour
         animatorPlayer.SetInteger("state", (int) state);
     }
 
+    private bool iSGround()
+    {
+        return Physics2D.BoxCast(colliderPlayer.bounds.center, colliderPlayer.bounds.size, 0f, Vector2.down, .1f, mapMask);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Map"))
+        {
+            isDoublejump = false;
+        }
+    }
 }

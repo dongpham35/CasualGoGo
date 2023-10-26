@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -3194290505328047066}
   - component: {fileID: 6178275630780718987}
   - component: {fileID: 9175201151492820023}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: MaskDude
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -129,6 +129,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inputHorizontal: 
   inputVertical: 
+  mapMask:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!95 &-3194290505328047066
 Animator:
   serializedVersion: 5

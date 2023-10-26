@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5785323671894475552}
   - component: {fileID: -2081099654976599807}
   - component: {fileID: -1248764151846790188}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: NinjaFrog
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -129,6 +129,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inputHorizontal: 
   inputVertical: 
+  mapMask:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!95 &5785323671894475552
 Animator:
   serializedVersion: 5

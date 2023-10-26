@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 688346174144736818}
   - component: {fileID: 3352019063817874122}
   - component: {fileID: 48156299596523725}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: PinkMan
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -129,6 +129,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inputHorizontal: 
   inputVertical: 
+  mapMask:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!95 &688346174144736818
 Animator:
   serializedVersion: 5
