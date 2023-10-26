@@ -10,11 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 4332061695712703671}
   - component: {fileID: 7603290795710829423}
-  - component: {fileID: 1339852629580328886}
   - component: {fileID: 6992011617635107176}
   - component: {fileID: -9197741137104857007}
-  - component: {fileID: 8866308602924043582}
-  - component: {fileID: 3093810447568894011}
+  - component: {fileID: 5785323671894475552}
+  - component: {fileID: -2081099654976599807}
+  - component: {fileID: -1248764151846790188}
   m_Layer: 6
   m_Name: NinjaFrog
   m_TagString: Untagged
@@ -89,27 +89,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &1339852629580328886
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5429820726549970448}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: b34c49fa2f01f87429d5a6a561aee4f1, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!61 &6992011617635107176
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -150,7 +129,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inputHorizontal: 
   inputVertical: 
---- !u!50 &8866308602924043582
+--- !u!95 &5785323671894475552
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5429820726549970448}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b34c49fa2f01f87429d5a6a561aee4f1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!50 &-2081099654976599807
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
@@ -171,7 +171,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!66 &3093810447568894011
+--- !u!66 &-1248764151846790188
 CompositeCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

@@ -17,26 +17,27 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        rb.constraints = RigidbodyConstraints2D.FreezeRotation;
         aniPlayer = GetComponent<Animator>();
         spritePlayer = GetComponent<SpriteRenderer>();
-        rb.constraints = RigidbodyConstraints2D.FreezeRotation;
     }
 
 
     private void Update()
     {
+        
         dirX = Input.GetAxisRaw(inputHorizontal);
         rb.velocity = new Vector2(dirX * speedCharacter, rb.velocity.y);
         if (Input.GetButtonDown(inputVertical))
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpCharacter);
         }
-
         UpdateAnimator();
     }
 
     private void UpdateAnimator()
     {
+        
 
         if (dirX > 0)
         {

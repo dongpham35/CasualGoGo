@@ -15,15 +15,15 @@ public class SpawnPlayer : MonoBehaviour
         {
             if (SystemData.countPlayer == 1)
             {
-                GameObject player1 = Instantiate(prefabsCharacter[index1], new Vector2(-9, 1.5f),Quaternion.identity);
+                GameObject player1 = Instantiate(prefabsCharacter[index1], new Vector3(-9f, 1.5f, 0f),Quaternion.identity);
                 PlayerController script = player1.GetComponent<PlayerController>();
                 script.inputHorizontal = "Horizontal";
                 script.inputVertical = "Vertical";
             }
             else if (SystemData.countPlayer == 2)
             {
-                GameObject player1 = Instantiate(prefabsCharacter[index1], new Vector2(-9, 1.5f), Quaternion.identity);
-                GameObject player2 = Instantiate(prefabsCharacter[index2], new Vector2(-9, 1.5f), Quaternion.identity);
+                GameObject player1 = Instantiate(prefabsCharacter[index1], new Vector3(-9, 1.5f, 0f), Quaternion.identity);
+                GameObject player2 = Instantiate(prefabsCharacter[index2], new Vector3(-9, 1.5f, 0f), Quaternion.identity);
                 PlayerController script = player1.GetComponent<PlayerController>();
                 script.inputHorizontal = "Horizontal";
                 script.inputVertical = "Vertical";
