@@ -4699,11 +4699,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4abdb48773afd54797231cc90aeed51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabsCharacter:
-  - {fileID: 5430700747650722602, guid: 1120bf94d7cf85a40911b4aee377ee98, type: 3}
-  - {fileID: 5429820726549970448, guid: f901a3bdb0040a4479b76366827ec3c3, type: 3}
-  - {fileID: 3911728470702454878, guid: 70d68fc901df61943a8339ec21d02c82, type: 3}
-  - {fileID: 1374512765124246309, guid: a005a3c4c9a0fbf48b5f5be3ac673972, type: 3}
 --- !u!114 &1458588435
 MonoBehaviour:
   m_ObjectHideFlags: 0
