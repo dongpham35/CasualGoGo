@@ -15,9 +15,11 @@ GameObject:
   - component: {fileID: 5785323671894475552}
   - component: {fileID: -2081099654976599807}
   - component: {fileID: -1248764151846790188}
+  - component: {fileID: -1443375491594725066}
+  - component: {fileID: -79658079272571464}
   m_Layer: 7
   m_Name: NinjaFrog
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -196,3 +198,27 @@ CompositeCollider2D:
     m_Paths: []
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
+--- !u!114 &-1443375491594725066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5429820726549970448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a8dd7f8b1c88094f905b842f9d66e23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-79658079272571464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5429820726549970448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49a859f9002ec3741a532840c3b24886, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

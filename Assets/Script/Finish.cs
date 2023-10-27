@@ -4,15 +4,30 @@ using UnityEngine;
 
 public class Finish : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public static int countPlayer;
+    public static bool isKey;
+
+    private bool isFinished = false;
+
+    private void Start()
     {
-        
+        countPlayer = 0;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        
+        if (collision.gameObject.CompareTag("Player") && !isFinished)
+        {
+            if(countPlayer >= 2 && isKey)
+            {
+                new ShowCanvas().showCanvasContinue();
+                isFinished = true;
+                countPlayer = 0;
+            }
+            else
+            {
+                countPlayer++;
+            }
+        }
     }
 }
