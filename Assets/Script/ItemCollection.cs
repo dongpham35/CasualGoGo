@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ItemCollection : MonoBehaviour
 {
     public static int score = 0;
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -12,8 +14,8 @@ public class ItemCollection : MonoBehaviour
         {
             Destroy(collision.gameObject);
             score++;
-            new ShowCanvas().showscore();
         }
+
         if (collision.gameObject.CompareTag("Key"))
         {
             Destroy(collision.gameObject);

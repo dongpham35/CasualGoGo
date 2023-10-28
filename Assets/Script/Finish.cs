@@ -4,29 +4,28 @@ using UnityEngine;
 
 public class Finish : MonoBehaviour
 {
-    public static int countPlayer;
+    private int countPlayer;
     public static bool isKey;
+    private GameObject canvasContinue;
 
-    private bool isFinished = false;
+    public static bool isFinished;
 
     private void Start()
     {
         countPlayer = 0;
+        canvasContinue = transform.Find("CanvasContinue").gameObject as GameObject;
+        canvasContinue.SetActive(false);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player") && !isFinished)
         {
-            if(countPlayer >= 2 && isKey)
+            countPlayer++;
+            if(countPlayer >= SystemData.countPlayer && isKey)
             {
-                new ShowCanvas().showCanvasContinue();
                 isFinished = true;
-                countPlayer = 0;
-            }
-            else
-            {
-                countPlayer++;
+                canvasContinue.SetActive(true);
             }
         }
     }
