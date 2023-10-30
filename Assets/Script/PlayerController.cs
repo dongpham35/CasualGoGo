@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     public string inputVertical;
 
     [SerializeField] private LayerMask mapMask;
+    [SerializeField] private AudioSource audioJump;
 
     private bool isDoublejump = false;
     private float dirX;
@@ -62,6 +63,7 @@ public class PlayerController : MonoBehaviour
 
         if(rb.velocity.y > 0.5f)
         {
+            audioJump.Play();
             state = anim.jump;
             if(!isDoublejump)
             {

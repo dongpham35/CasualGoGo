@@ -8,6 +8,7 @@ public class Dead : MonoBehaviour
     private Rigidbody2D rb;
     private Animator anim;
     private GameObject canvasDead;
+    [SerializeField] private AudioSource audioDead;
 
     private void Start()
     {
@@ -20,6 +21,7 @@ public class Dead : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Trap"))
         {
+            audioDead.Play();
             isDead = true;
             Die();
             rb.bodyType = RigidbodyType2D.Static;

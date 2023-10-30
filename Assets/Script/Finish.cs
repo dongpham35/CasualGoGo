@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Finish : MonoBehaviour
 {
+    [SerializeField] private AudioSource audioFinish;
+
     private int countPlayer;
     public static bool isKey;
     private GameObject canvasContinue;
@@ -25,6 +27,7 @@ public class Finish : MonoBehaviour
             countPlayer++;
             if(countPlayer >= SystemData.countPlayer && isKey)
             {
+                audioFinish.Play();
                 canvasContinue.SetActive(true);
             }
         }
