@@ -12,12 +12,15 @@ public class SceneController : MonoBehaviour
 
     public void MoveMenuGame()
     {
+        Time.timeScale = 1.0f;
+        ItemCollection.score = 0;
         SceneManager.LoadScene(0);
     }
 
     public void PlayAgain()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        ItemCollection.score = 0;
+        SceneManager.LoadScene(3);
     }
 
     public void ExitApplication()

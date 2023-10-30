@@ -223,7 +223,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49a859f9002ec3741a532840c3b24886, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvasDead: {fileID: 8818290649379021475, guid: ac53d1912c7fd1147b7a2cf8987451df, type: 3}
 --- !u!1001 &7522759107962415539
 PrefabInstance:
   m_ObjectHideFlags: 0

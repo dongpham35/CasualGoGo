@@ -18,7 +18,6 @@ public class SpawnPlayer : MonoBehaviour
             if (SystemData.countPlayer == 1)
             {
                 player1 = Instantiate(prefabsCharacter[index1], new Vector3(-9f, 1.5f, 0f),Quaternion.identity);
-                GameObject.Destroy(player2);
                 PlayerController script = player1.GetComponent<PlayerController>();
                 script.inputHorizontal = "Horizontal";
                 script.inputVertical = "Vertical";

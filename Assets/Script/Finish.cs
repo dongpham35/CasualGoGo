@@ -15,6 +15,7 @@ public class Finish : MonoBehaviour
         countPlayer = 0;
         canvasContinue = transform.Find("CanvasContinue").gameObject as GameObject;
         canvasContinue.SetActive(false);
+        
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -24,7 +25,6 @@ public class Finish : MonoBehaviour
             countPlayer++;
             if(countPlayer >= SystemData.countPlayer && isKey)
             {
-                isFinished = true;
                 canvasContinue.SetActive(true);
             }
         }

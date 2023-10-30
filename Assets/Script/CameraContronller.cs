@@ -21,24 +21,36 @@ public class CameraContronller : MonoBehaviour
     {
         if (SystemData.countPlayer == 1)
         {
-            transform.position = SpawnPlayer.player1.transform.position + new Vector3(0f,0f,-10f);
+            try
+            {
+                transform.position = SpawnPlayer.player1.transform.position + new Vector3(0f, 0f, -10f);
+            }catch(System.Exception ex)
+            {
+                Debug.Log(ex.Message);
+            }
         }
         else if (SystemData.countPlayer == 2)
         {
-            distanceMultiplayer = Vector3.Distance(SpawnPlayer.player1.transform.position, SpawnPlayer.player2.transform.position);
-            if (distanceMultiplayer / 2 > cam.orthographicSize && cam.orthographicSize < maxSizecamera)
+            try
             {
-                cam.orthographicSize += 0.1f;
-            }
-            if (distanceMultiplayer / 2 < cam.orthographicSize && cam.orthographicSize > minSizecamera)
+                distanceMultiplayer = Vector3.Distance(SpawnPlayer.player1.transform.position, SpawnPlayer.player2.transform.position);
+                if (distanceMultiplayer / 2 > cam.orthographicSize && cam.orthographicSize < maxSizecamera)
+                {
+                    cam.orthographicSize += 0.1f;
+                }
+                if (distanceMultiplayer / 2 < cam.orthographicSize && cam.orthographicSize > minSizecamera)
+                {
+                    cam.orthographicSize -= 0.1f;
+                }
+                Vector3 middlePoint = (SpawnPlayer.player1.transform.position + SpawnPlayer.player2.transform.position) / 2f;
+                Vector3 desiredPosition = middlePoint;
+                Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed);
+                Vector3 temp = new Vector3(0, 0, -10);
+                transform.position = smoothedPosition + temp;
+            }catch(System.Exception ex)
             {
-                cam.orthographicSize -= 0.1f;
+                Debug.Log(ex.Message);
             }
-            Vector3 middlePoint = (SpawnPlayer.player1.transform.position + SpawnPlayer.player2.transform.position) / 2f;
-            Vector3 desiredPosition = middlePoint;
-            Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed);
-            Vector3 temp = new Vector3(0, 0, -10);
-            transform.position = smoothedPosition + temp;
         }
         
     }

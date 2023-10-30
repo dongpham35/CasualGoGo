@@ -15,7 +15,6 @@ public class ItemCollection : MonoBehaviour
             Destroy(collision.gameObject);
             score++;
         }
-
         if (collision.gameObject.CompareTag("Key"))
         {
             Destroy(collision.gameObject);

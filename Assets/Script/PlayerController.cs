@@ -60,7 +60,7 @@ public class PlayerController : MonoBehaviour
             state = anim.idle;
         }
 
-        if(rb.velocity.y > 1f)
+        if(rb.velocity.y > 0.5f)
         {
             state = anim.jump;
             if(!isDoublejump)
@@ -69,7 +69,7 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        if(rb.velocity.y < -1f)
+        if(rb.velocity.y < -0.5f)
         {
             state = anim.fall;
         }
