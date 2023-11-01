@@ -11,11 +11,11 @@ GameObject:
   - component: {fileID: 7947359859763327383}
   - component: {fileID: 275772781142009678}
   - component: {fileID: -8066343929212615713}
-  - component: {fileID: 975950454225016055}
   - component: {fileID: 688346174144736818}
   - component: {fileID: 3352019063817874122}
   - component: {fileID: 48156299596523725}
   - component: {fileID: 258815181859848696}
+  - component: {fileID: 975950454225016055}
   - component: {fileID: -2960865768383147024}
   - component: {fileID: -816739862963134362}
   - component: {fileID: 8864011018103857996}
@@ -121,24 +121,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.244, y: 1.36}
   m_EdgeRadius: 0
---- !u!114 &975950454225016055
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3911728470702454878}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c2148eda489445419ca6f12edf73773, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inputHorizontal: 
-  inputVertical: 
-  mapMask:
-    serializedVersion: 2
-    m_Bits: 64
-  audioJump: {fileID: 7311781153776962646, guid: 1120bf94d7cf85a40911b4aee377ee98, type: 3}
 --- !u!95 &688346174144736818
 Animator:
   serializedVersion: 5
@@ -215,7 +197,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a8dd7f8b1c88094f905b842f9d66e23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioCollection: {fileID: 1968077515662192566, guid: 1120bf94d7cf85a40911b4aee377ee98, type: 3}
+  audioCollection: {fileID: -816739862963134362}
+--- !u!114 &975950454225016055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3911728470702454878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c2148eda489445419ca6f12edf73773, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputHorizontal: 
+  inputVertical: 
+  mapMask:
+    serializedVersion: 2
+    m_Bits: 64
+  audioJump: {fileID: 8864011018103857996}
 --- !u!114 &-2960865768383147024
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -228,7 +228,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49a859f9002ec3741a532840c3b24886, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioDead: {fileID: -7228003733047387237, guid: 1120bf94d7cf85a40911b4aee377ee98, type: 3}
+  audioDead: {fileID: 7831505935605226091}
 --- !u!82 &-816739862963134362
 AudioSource:
   m_ObjectHideFlags: 0

@@ -28,8 +28,4 @@ public class SceneController : MonoBehaviour
         Application.Quit();
     }
 
-    public void Resume()
-    {
-        Time.timeScale = 1.0f;
-    }
 }

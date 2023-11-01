@@ -7,8 +7,10 @@ using UnityEngine.UI;
 public class ShowCanvas : MonoBehaviour
 {
     public Text txtScore;
-    private GameObject canvaPause;
+    
     private bool canvaResume;
+    private GameObject canvaPause;
+    [SerializeField] private AudioSource audioPlay;
 
     private void Start()
     {
@@ -35,6 +37,7 @@ public class ShowCanvas : MonoBehaviour
     public void ResumeGame()
     {
         canvaPause.SetActive(false);
+        audioPlay.mute = false;
         Time.timeScale = 1.0f;
         canvaResume = false;
     }
@@ -42,6 +45,7 @@ public class ShowCanvas : MonoBehaviour
     private void PauseGame()
     {
         canvaPause.SetActive(true);
+        audioPlay.mute = true;
         Time.timeScale = 0.0f;
         canvaResume = true;
     }

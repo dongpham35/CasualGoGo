@@ -37,6 +37,7 @@ public class PlayerController : MonoBehaviour
         {
             if(isDoublejump || iSGround())
             {
+                audioJump.Play();
                 rb.velocity = new Vector2(rb.velocity.x, jumpCharacter);
                 isDoublejump = !isDoublejump;
             }
@@ -63,7 +64,6 @@ public class PlayerController : MonoBehaviour
 
         if(rb.velocity.y > 0.5f)
         {
-            audioJump.Play();
             state = anim.jump;
             if(!isDoublejump)
             {

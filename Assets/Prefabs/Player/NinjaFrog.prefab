@@ -11,11 +11,11 @@ GameObject:
   - component: {fileID: 4332061695712703671}
   - component: {fileID: 7603290795710829423}
   - component: {fileID: 6992011617635107176}
-  - component: {fileID: -9197741137104857007}
   - component: {fileID: 5785323671894475552}
   - component: {fileID: -2081099654976599807}
   - component: {fileID: -1248764151846790188}
   - component: {fileID: -1443375491594725066}
+  - component: {fileID: -9197741137104857007}
   - component: {fileID: -79658079272571464}
   - component: {fileID: 7300418608926057839}
   - component: {fileID: -3146520776840866147}
@@ -121,24 +121,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.244, y: 1.36}
   m_EdgeRadius: 0
---- !u!114 &-9197741137104857007
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5429820726549970448}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c2148eda489445419ca6f12edf73773, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inputHorizontal: 
-  inputVertical: 
-  mapMask:
-    serializedVersion: 2
-    m_Bits: 64
-  audioJump: {fileID: 7311781153776962646, guid: 1120bf94d7cf85a40911b4aee377ee98, type: 3}
 --- !u!95 &5785323671894475552
 Animator:
   serializedVersion: 5
@@ -216,6 +198,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioCollection: {fileID: 1968077515662192566, guid: 1120bf94d7cf85a40911b4aee377ee98, type: 3}
+--- !u!114 &-9197741137104857007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5429820726549970448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c2148eda489445419ca6f12edf73773, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputHorizontal: 
+  inputVertical: 
+  mapMask:
+    serializedVersion: 2
+    m_Bits: 64
+  audioJump: {fileID: -3146520776840866147}
 --- !u!114 &-79658079272571464
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -228,7 +228,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49a859f9002ec3741a532840c3b24886, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioDead: {fileID: -7228003733047387237, guid: 1120bf94d7cf85a40911b4aee377ee98, type: 3}
+  audioDead: {fileID: 8190577157133542149}
 --- !u!82 &7300418608926057839
 AudioSource:
   m_ObjectHideFlags: 0
