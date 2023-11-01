@@ -5,8 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class SceneController : MonoBehaviour
 {
+    private int preScore = 0;
     public void NextScene()
     {
+        preScore = ItemCollection.score;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
@@ -19,8 +21,8 @@ public class SceneController : MonoBehaviour
 
     public void PlayAgain()
     {
-        ItemCollection.score = 0;
-        SceneManager.LoadScene(3);
+        ItemCollection.score = preScore;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     public void ExitApplication()

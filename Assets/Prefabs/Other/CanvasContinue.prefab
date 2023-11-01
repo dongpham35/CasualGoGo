@@ -49,7 +49,7 @@ Canvas:
   m_GameObject: {fileID: 1884836824494141779}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 1
+  m_RenderMode: 0
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -352,7 +352,7 @@ GameObject:
   - component: {fileID: 1884836826134560507}
   - component: {fileID: 1884836826134560506}
   - component: {fileID: 1884836826134560509}
-  - component: {fileID: 2126482912867649480}
+  - component: {fileID: 7750840695963781257}
   m_Layer: 5
   m_Name: btnYes
   m_TagString: Untagged
@@ -463,7 +463,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2126482912867649480}
+      - m_Target: {fileID: 7750840695963781257}
         m_TargetAssemblyTypeName: SceneController, Assembly-CSharp
         m_MethodName: NextScene
         m_Mode: 1
@@ -475,7 +475,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &2126482912867649480
+--- !u!114 &7750840695963781257
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
