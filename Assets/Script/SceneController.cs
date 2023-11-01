@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class SceneController : MonoBehaviour
 {
-    private int preScore = 0;
+    private static int preScore = 0;
     public void NextScene()
     {
         preScore = ItemCollection.score;
