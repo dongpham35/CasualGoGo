@@ -27,8 +27,10 @@ public class Finish : MonoBehaviour
             countPlayer++;
             if(countPlayer >= SystemData.countPlayer && isKey)
             {
+                Time.timeScale = 0.0f;
                 audioFinish.Play();
                 canvasContinue.SetActive(true);
+                
             }
         }
     }

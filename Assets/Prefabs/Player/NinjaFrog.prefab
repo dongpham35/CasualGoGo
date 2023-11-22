@@ -535,7 +535,7 @@ PrefabInstance:
     - target: {fileID: 8818290648994080109, guid: ac53d1912c7fd1147b7a2cf8987451df, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 7864062160944172861}
+      objectReference: {fileID: 4901269319192235325}
     - target: {fileID: 8818290648994080109, guid: ac53d1912c7fd1147b7a2cf8987451df, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: MoveMenuGame
@@ -630,6 +630,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ac53d1912c7fd1147b7a2cf8987451df, type: 3}
+--- !u!114 &4901269319192235325 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5326897850116090160, guid: ac53d1912c7fd1147b7a2cf8987451df, type: 3}
+  m_PrefabInstance: {fileID: 1002120346579461133}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44b25890996fe4f47814a80a9984e9e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &8613384677537728170 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8818290649379021479, guid: ac53d1912c7fd1147b7a2cf8987451df, type: 3}
@@ -647,23 +658,6 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8613384678828433713}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 44b25890996fe4f47814a80a9984e9e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!1 &8613384679300497762 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8818290648994080111, guid: ac53d1912c7fd1147b7a2cf8987451df, type: 3}
-  m_PrefabInstance: {fileID: 1002120346579461133}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &7864062160944172861
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8613384679300497762}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 44b25890996fe4f47814a80a9984e9e7, type: 3}

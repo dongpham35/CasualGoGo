@@ -15,6 +15,7 @@ public class DynamicCharacter : MonoBehaviour
         img = GetComponent<Image>();
         count = sprites.Length;
         StartCoroutine(Wait());
+        
     }
     IEnumerator Wait()
     {
@@ -26,4 +27,5 @@ public class DynamicCharacter : MonoBehaviour
             yield return new WaitForSeconds(0.05f);
         }
     }
+    
 }

@@ -8,6 +8,7 @@ public class SceneController : MonoBehaviour
     private static int preScore = 0;
     public void NextScene()
     {
+        Time.timeScale = 1.0f;
         preScore = ItemCollection.score;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
@@ -21,6 +22,7 @@ public class SceneController : MonoBehaviour
 
     public void PlayAgain()
     {
+        Time.timeScale = 1.0f;
         ItemCollection.score = preScore;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }

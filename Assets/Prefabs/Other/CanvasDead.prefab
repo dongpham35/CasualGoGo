@@ -92,6 +92,8 @@ GameObject:
   - component: {fileID: 8818290648522360112}
   - component: {fileID: 8818290648522360113}
   - component: {fileID: 8818290648522360114}
+  - component: {fileID: 8650984736089634129}
+  - component: {fileID: 3566617435114336826}
   m_Layer: 5
   m_Name: BtnYes
   m_TagString: Untagged
@@ -202,7 +204,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 3566617435114336826}
+        m_TargetAssemblyTypeName: CountScore, Assembly-CSharp
+        m_MethodName: Reset
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 8650984736089634129}
         m_TargetAssemblyTypeName: SceneController, Assembly-CSharp
         m_MethodName: PlayAgain
         m_Mode: 1
@@ -214,6 +228,31 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &8650984736089634129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8818290648522360124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44b25890996fe4f47814a80a9984e9e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3566617435114336826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8818290648522360124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f62c44beb35754146ba89f43bfc208b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  txtTime: {fileID: 0}
 --- !u!1 &8818290648797807288
 GameObject:
   m_ObjectHideFlags: 0
@@ -306,6 +345,7 @@ GameObject:
   - component: {fileID: 8818290648994080099}
   - component: {fileID: 8818290648994080108}
   - component: {fileID: 8818290648994080109}
+  - component: {fileID: 5326897850116090160}
   m_Layer: 5
   m_Name: BtnNo
   m_TagString: Untagged
@@ -416,7 +456,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 5326897850116090160}
         m_TargetAssemblyTypeName: SceneController, Assembly-CSharp
         m_MethodName: MoveMenuGame
         m_Mode: 1
@@ -428,6 +468,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &5326897850116090160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8818290648994080111}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44b25890996fe4f47814a80a9984e9e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8818290649379021475
 GameObject:
   m_ObjectHideFlags: 0
