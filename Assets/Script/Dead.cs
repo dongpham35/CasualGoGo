@@ -8,6 +8,7 @@ public class Dead : MonoBehaviour
     private Rigidbody2D rb;
     private Animator anim;
     private GameObject canvasDead;
+    private GameObject canvasSaveScore;
     [SerializeField] private AudioSource audioDead;
 
     private void Start()
@@ -15,6 +16,8 @@ public class Dead : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         canvasDead = transform.Find("CanvasDead").gameObject as GameObject;
+        canvasSaveScore = transform.Find("CanvasSaveScore").gameObject as GameObject;
+        canvasSaveScore.SetActive(false);
         canvasDead.SetActive(false);
     }
     private void OnCollisionEnter2D(Collision2D collision)
@@ -33,5 +36,12 @@ public class Dead : MonoBehaviour
     {
         Time.timeScale = 0.0f;
         anim.SetBool("deadth", true);
+    }
+
+
+    public void showCanvasSaveScore()
+    {
+        canvasSaveScore.SetActive(true );
+        canvasDead.SetActive(false);
     }
 }

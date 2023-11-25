@@ -462,6 +462,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3239719858112957600}
     m_Modifications:
+    - target: {fileID: 5883342761583273, guid: 7763bafd42c3e3e41b95b8bffe25b6c5, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 468
+      objectReference: {fileID: 0}
+    - target: {fileID: 5883342761583273, guid: 7763bafd42c3e3e41b95b8bffe25b6c5, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 214
+      objectReference: {fileID: 0}
     - target: {fileID: 688152718370182386, guid: 7763bafd42c3e3e41b95b8bffe25b6c5, type: 3}
       propertyPath: m_FontData.m_Alignment
       value: 2
