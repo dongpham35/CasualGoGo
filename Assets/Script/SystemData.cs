@@ -41,5 +41,4 @@ public class SystemData : MonoBehaviour
         SceneManager.LoadScene(0);
     }
 
-
 }

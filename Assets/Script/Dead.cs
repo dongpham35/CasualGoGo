@@ -34,6 +34,7 @@ public class Dead : MonoBehaviour
 
     private void Die()
     {
+
         Time.timeScale = 0.0f;
         anim.SetBool("deadth", true);
     }

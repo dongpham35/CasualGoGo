@@ -9,6 +9,7 @@ public class Finish : MonoBehaviour
     private int countPlayer;
     public static bool isKey;
     private GameObject canvasContinue;
+    private GameObject canvasSaveScore;  
 
     public static bool isFinished;
 
@@ -17,6 +18,8 @@ public class Finish : MonoBehaviour
         countPlayer = 0;
         canvasContinue = transform.Find("CanvasContinue").gameObject as GameObject;
         canvasContinue.SetActive(false);
+        canvasSaveScore = transform.Find("CanvasSaveScore").gameObject as GameObject;
+        canvasSaveScore.SetActive(false);
         
     }
 
@@ -30,8 +33,14 @@ public class Finish : MonoBehaviour
                 Time.timeScale = 0.0f;
                 audioFinish.Play();
                 canvasContinue.SetActive(true);
-                
+                SaveScore.CountScore();
             }
         }
+    }
+
+    public void saveScore()
+    {
+        SaveScore.CountScore();
+        canvasSaveScore.SetActive(true );
     }
 }

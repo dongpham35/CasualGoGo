@@ -5,11 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class SceneController : MonoBehaviour
 {
-    private static int preScore = 0;
     public void NextScene()
     {
         Time.timeScale = 1.0f;
-        preScore = ItemCollection.score;
+        ItemCollection.score = 0;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
@@ -23,7 +22,7 @@ public class SceneController : MonoBehaviour
     public void PlayAgain()
     {
         Time.timeScale = 1.0f;
-        ItemCollection.score = preScore;
+        ItemCollection.score = 0;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
