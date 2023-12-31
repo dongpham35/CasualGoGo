@@ -21,6 +21,7 @@ public class SceneController : MonoBehaviour
 
     public void PlayAgain()
     {
+        PlayerPrefs.SetInt("CurrentHealth", 3);
         Time.timeScale = 1.0f;
         ItemCollection.score = 0;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);

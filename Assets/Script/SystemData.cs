@@ -21,6 +21,7 @@ public class SystemData : MonoBehaviour
 
     public void onclickStart()
     {
+        PlayerPrefs.SetInt("CurrentHealth", 3);
         SceneManager.LoadScene(3);
         
     }

@@ -109,7 +109,7 @@ public class SaveScore : MonoBehaviour
         {
             point_time = 40;
         }
-        Score = Score + point_time * ItemCollection.score / CountFruit.count;
+        Score = Score + PlayerPrefs.GetInt("CurrentHealth") / 3 * point_time * ItemCollection.score / CountFruit.count;
 
         
     }

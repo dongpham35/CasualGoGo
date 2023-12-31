@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Dead : MonoBehaviour
 {
@@ -24,11 +25,20 @@ public class Dead : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Trap"))
         {
-            audioDead.Play();
-            isDead = true;
-            Die();
-            rb.bodyType = RigidbodyType2D.Static;
-            canvasDead.SetActive(true);
+            if(PlayerPrefs.GetInt("CurrentHealth") == 1)
+            {
+                isDead = true;
+                Die();
+                rb.bodyType = RigidbodyType2D.Static;
+                canvasDead.SetActive(true);
+            }
+            else
+            {
+                audioDead.Play();
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+                ItemCollection.score = 0;
+                PlayerPrefs.SetInt("isDead", 1);
+            }
         }
     }
 

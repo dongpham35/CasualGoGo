@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour
     private Animator animatorPlayer;
     private SpriteRenderer spritePlayer;
     private BoxCollider2D colliderPlayer;
+    private Vector2 lookDirection = new Vector2(1, 0);
     enum anim { idle, run, jump, fall, doublejump}
     anim state;
     private void Start()
@@ -43,6 +44,21 @@ public class PlayerController : MonoBehaviour
             }
         }
 
+        if (Input.GetKeyDown(KeyCode.X))
+        {
+            RaycastHit2D hit = Physics2D.Raycast(rb.position + Vector2.up * 0.2f, lookDirection, 1.5f, LayerMask.GetMask("NPC"));
+            if (hit.collider != null)
+            {
+                NonPlayerCharacter character = hit.collider.GetComponent<NonPlayerCharacter>();
+                if (character != null)
+                {
+                    character.DisplayDialog();
+                    Finish.isKey = true;
+                    Debug.Log("Da lay chia");
+                }
+            }
+        }
+
         updateAnimation();
     }
 
@@ -50,10 +66,12 @@ public class PlayerController : MonoBehaviour
     {
         if(dirX > 0f)
         {
+            lookDirection.Set(1, 0);
             spritePlayer.flipX = false;
             state = anim.run;
         }else if(dirX < 0f)
         {
+            lookDirection.Set(-1, 0);
             spritePlayer.flipX = true;
             state = anim.run;
         }
@@ -91,4 +109,5 @@ public class PlayerController : MonoBehaviour
             isDoublejump = false;
         }
     }
+
 }
