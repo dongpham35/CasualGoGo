@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
     public string inputHorizontal;
     public string inputVertical;
+    public Text namePlayer;
 
     [SerializeField] private LayerMask mapMask;
     [SerializeField] private AudioSource audioJump;
@@ -53,8 +55,6 @@ public class PlayerController : MonoBehaviour
                 if (character != null)
                 {
                     character.DisplayDialog();
-                    Finish.isKey = true;
-                    Debug.Log("Da lay chia");
                 }
             }
         }

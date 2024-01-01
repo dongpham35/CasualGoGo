@@ -21,6 +21,8 @@ public class SpawnPlayer : MonoBehaviour
                 PlayerController script = player1.GetComponent<PlayerController>();
                 script.inputHorizontal = "Horizontal";
                 script.inputVertical = "Vertical";
+                script.namePlayer.text = "Player 1";
+
             }
             else if (SystemData.countPlayer == 2)
             {
@@ -29,9 +31,13 @@ public class SpawnPlayer : MonoBehaviour
                 PlayerController script = player1.GetComponent<PlayerController>();
                 script.inputHorizontal = "Horizontal";
                 script.inputVertical = "Vertical";
+                script.namePlayer.text = "Player 1";
+                script.namePlayer.color = Color.blue;
                 PlayerController script1 = player2.GetComponent<PlayerController>();
                 script1.inputHorizontal = "Horizontal1";
                 script1.inputVertical = "Vertical1";
+                script1.namePlayer.text = "Player 2";
+                script1.namePlayer.color = Color.black;
             }
         }
     }
