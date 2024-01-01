@@ -22,6 +22,7 @@ public class SpawnPlayer : MonoBehaviour
                 script.inputHorizontal = "Horizontal";
                 script.inputVertical = "Vertical";
                 script.namePlayer.text = "Player 1";
+                script.inputInteract = KeyCode.X;
 
             }
             else if (SystemData.countPlayer == 2)
@@ -33,11 +34,13 @@ public class SpawnPlayer : MonoBehaviour
                 script.inputVertical = "Vertical";
                 script.namePlayer.text = "Player 1";
                 script.namePlayer.color = Color.blue;
+                script.inputInteract = KeyCode.X;
                 PlayerController script1 = player2.GetComponent<PlayerController>();
                 script1.inputHorizontal = "Horizontal1";
                 script1.inputVertical = "Vertical1";
                 script1.namePlayer.text = "Player 2";
                 script1.namePlayer.color = Color.black;
+                script1.inputInteract = KeyCode.J;
             }
         }
     }

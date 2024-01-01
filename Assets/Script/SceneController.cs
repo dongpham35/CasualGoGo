@@ -8,7 +8,6 @@ public class SceneController : MonoBehaviour
     public void NextScene()
     {
         Time.timeScale = 1.0f;
-        ItemCollection.score = 0;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 

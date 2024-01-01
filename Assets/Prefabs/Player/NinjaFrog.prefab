@@ -698,6 +698,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4332061695712703671}
     m_Modifications:
+    - target: {fileID: 373433144350725236, guid: a603b607a7f8fef478a839f1737d9c4e, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4080704793542249322, guid: a603b607a7f8fef478a839f1737d9c4e, type: 3}
       propertyPath: m_Name
       value: CanvasNamePlayer

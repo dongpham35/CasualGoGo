@@ -45,7 +45,6 @@ public class SaveScore : MonoBehaviour
         StreamWriter sw = null;
         using(sw = File.CreateText(stringPath))
         {
-            Debug.Log("Writing to file");
             foreach (var item in  Dscore)
             {
                 if (i < 5)
@@ -96,7 +95,7 @@ public class SaveScore : MonoBehaviour
     public static void CountScore()
     {
         int level = SceneManager.sceneCount - 2;
-        int point_time = 0;
+        int point_time = 1;
         if (Timer.runtime <= (60 + level * 10))
         {
             point_time = 80;
@@ -109,9 +108,7 @@ public class SaveScore : MonoBehaviour
         {
             point_time = 40;
         }
-        Score = Score + PlayerPrefs.GetInt("CurrentHealth") / 3 * point_time * ItemCollection.score / CountFruit.count;
-
-        
+        Score = Score + (PlayerPrefs.GetInt("CurrentHealth") + 1) / 3 * point_time * ItemCollection.score / CountFruit.count;
     }
 
     private static Dictionary<string, int> SortValue(Dictionary<string, int> d)
@@ -120,12 +117,5 @@ public class SaveScore : MonoBehaviour
         return sorted;
     }
 
-    private static void PrintDictionary(Dictionary<string, int> d)
-    {
-        foreach(var item in d)
-        {
-            Debug.Log("Key : " + item.Key + "Value: " + item.Value);
-        }
-    }
 
 }

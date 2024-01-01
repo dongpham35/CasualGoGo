@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
 {
     public string inputHorizontal;
     public string inputVertical;
+    public KeyCode inputInteract;
     public Text namePlayer;
 
     [SerializeField] private LayerMask mapMask;
@@ -46,7 +47,7 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.X))
+        if (Input.GetKeyDown(inputInteract))
         {
             RaycastHit2D hit = Physics2D.Raycast(rb.position + Vector2.up * 0.2f, lookDirection, 1.5f, LayerMask.GetMask("NPC"));
             if (hit.collider != null)

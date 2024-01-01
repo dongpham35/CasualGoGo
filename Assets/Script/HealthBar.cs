@@ -29,6 +29,7 @@ public class HealthBar : MonoBehaviour
         {
             health[currentHealth - 1].SetActive(false);
             PlayerPrefs.SetInt("CurrentHealth", currentHealth - 1);
+            Debug.Log(PlayerPrefs.GetInt("CurrentHealth"));
             PlayerPrefs.SetInt("isDead", 0);
         }
     }
